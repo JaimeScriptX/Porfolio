@@ -1,0 +1,80 @@
+---
+import PortfolioItem from '../components/PortfolioItem.astro';
+import Layout from '../layouts/Layout.astro';
+
+
+let title = Astro.props;
+// Fetch stars count from GitHub
+---
+
+<Layout documentTitle="Proyectos" documentDescription="Welcome to my portfolio, showcasing a selection of projects I've worked on.">
+  <div class="container">
+    <h1 class="main-heading text-swipe-animation">Proyectos</h1>
+
+    <section class="heading">
+      <h1 class="sub-heading text-swipe-animation">2023</h1>
+      <hr/>
+    </section>
+    <section class="projects">
+  
+      <PortfolioItem
+        isOpenSource
+        sourceCode="https://github.com/JaimeScriptX/PROJECT-SPORTIME-frontend"
+        projectYear="2023"
+        title="SPORTIME"
+        image="/images/projects/sportime.png"
+        tags={[
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Symfony",
+          "MySQL",
+          "Docker"
+        ]}>
+        <p slot="subtitle">Una plataforma integral para la gestión de eventos deportivos.</p>
+
+        <div slot="description">
+          <p>Utilicé React para el frontend, Symfony para el backend y MySQL como base de datos, garantizando una aplicación robusta y escalable.</p>
+        </div>
+      </PortfolioItem>
+
+      <PortfolioItem
+        isOpenSource
+        sourceCode="https://github.com/JaimeScriptX/centro-medico"
+        projectYear="2023"
+        title="HOSPITAL JOSE PLANES"
+        image="/images/projects/hospital.png"
+        tags={[
+          "HTML",
+          "CSS",
+          "Symfony",
+          "MySQL",
+        ]}>
+        <p slot="subtitle">Portal digital de un centro hospitalario</p>
+
+        <div slot="description">
+          <p>Opté por Symfony como el marco de trabajo tanto para la parte del servidor como para la interfaz de usuario, haciendo uso de Twig para la capa frontend, y gestionando la base de datos con MySQL.</p>
+        </div>
+      </PortfolioItem>
+
+    
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style lang="scss">
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 3rem; 
+    margin-top: 3rem;
+  }
+
+  @media screen and (max-width: 980px) {
+    .projects {
+      grid-template-columns: 1fr;  
+      margin-top: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,98 @@
+---
+import Button from '../components/Button.astro';
+import Alert from '../components/Alert.astro';
+import Socials from '../components/Socials.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout documentTitle="Contact" documentDescription="If you have a question or just want to say hi, I’ll get back to you as soon as I can!">
+  <div class="container">
+    <h1 class="main-heading text-swipe-animation">Contacto</h1>
+    <p>Si tienes alguna pregunta o simplemente quieres saludarme, ¡te responderé lo antes posible!<br class="main-heading-break" /> Puedes encontrarme en mis redes sociales.</p>
+
+    <div class="top-row">
+      <section class="social-section">
+        <Socials />
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<style lang="scss">
+  .top-row {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    section {
+      flex: 1;
+    }
+  }
+
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 0.25rem;
+    .form-block-row {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .contact-form-submit-button {
+    gap: 0.35rem;
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  #contact-form-submit-button-spinner {
+    display: none;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .contact-form-message {
+    display: none;
+  }
+
+  .social-section {
+    margin-top: 15px;
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(-360deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @media screen and (max-width: 980px) {
+    .main-heading-break {
+      display: none;
+    }
+
+    .top-row {
+      gap: 2rem;
+      flex-direction: column;
+    }
+
+    .contact-form-submit-button {
+      width: 100%;
+    }
+
+    .socials {
+      li {
+        a {
+          font-size: var(--font-size-lg);
+          font-weight: normal;
+          svg {
+            width: 25px !important;
+            height: 25px !important;
+          }
+        }
+      }
+    }
+  }
+</style>
+

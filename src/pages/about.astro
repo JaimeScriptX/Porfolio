@@ -1,120 +1,406 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import type { Skills } from '../types';
+import Layout from '../layouts/Layout.astro';
+import DevLogo from '../components/DevLogo.astro';
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+
+const tags: Skills[] = [
+  "React",
+  "Symfony",
+  "Angular",
+  "JavaScript",
+  "TypeScript",
+  "PHP",
+  "Tailwind CSS",
+  "MySQL",
+  "Figma",
+  "Docker",
+  "Astro",
+];
+
+
+// Fetch stars count from GitHub
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+<Layout documentTitle="Proyectos" documentDescription="Welcome to my portfolio, showcasing a selection of projects I've worked on.">
+  <section class="container">
+    <h1 class="main-heading text-swipe-animation" id="greeting">
+      Sobre mí
+    </h1>
+    
+    <div class="intro">
+      <p>👋 ¡Hola! Soy Jaime García Campuzano, un desarrollador Full Stack con un año de experiencia y formación en Desarrollo de Aplicaciones Web (DAW). </p>
+    </div>
+    <section class="flex flex-col md:flex-row gap-8 justify-center items-center pt-4">
+      <div
+        class="[&>p]:mb-4 [&>p>strong]:text-yellow-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1"
+      >
+      
+        <p>
+          Destaco por liderar un proyecto clave de eventos deportivos durante mi grado superior, utilizando React, Symfony y MySQL. 
+          Esta experiencia fortaleció mis habilidades técnicas y de liderazgo.
+        </p>
+    
+        <p>
+          En el ámbito laboral, he contribuido significativamente en proyectos especializados, destacando en el desarrollo con tecnologías como React, Node.js, PHP y Magento. 
+          Mi enfoque va más allá de la tecnología; me apasiona la creatividad y la resolución de problemas.
+          Estoy listo para enfrentar nuevos retos y contribuir a proyectos innovadores. ¡Conéctate conmigo y construyamos algo increíble juntos!
+        </p>
+        
+        <div class="tags flex gap-5">
+          {tags.map(tag => <DevLogo icon={tag} size={30} />)}
+        </div>
+      </div>
+      <img src="/images/profile.png" class="image" />
+    </section>
+    <section class="heading">
+      <h1 class="sub-heading text-swipe-animation">Experiencia laboral</h1>
+      <hr/>
+    </section>
+    <section id="cd-timeline" class="cd-container">
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture">
+        </div>
+  
+        <div class="cd-timeline-content">
+          <h2 style="color: #ffff">💼 DIGIO Soluciones Digitales</h2>
+          <div class="timeline-content-info">
+            <span class="timeline-content-info-title">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+                Full Stack Junior
+            </span>
+            <span class="timeline-content-info-date">
+              <i class="fa fa-calendar-o" aria-hidden="true"></i>
+              Marzo 2023 - Enero 2024
+            </span>
+          </div>
+          <p>Colaboré estrechamente con el equipo de diseñadores para implementar sus diseños, además de desarrollar soluciones personalizadas para abordar las necesidades específicas del equipo.</p>
+          <ul class="content-skills">
+          <li>React</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>PHP</li>
+          <li>NestJS</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>Magento</li>
+          <li>Docker</li>
+          <li>Meteor</li>
+          <li>MongoDB </li>
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>Jest</li>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
+          </ul>
+        </div> <!-- cd-timeline-content -->
+      </div> <!-- cd-timeline-block -->
+  
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-movie">
+        </div> <!-- cd-timeline-img -->
+  
+        <div class="cd-timeline-content">
+          <h2>Grado superior Desarrollo de Aplicaciones Web</h2>
+          <p>Graduado en Desarrollo de Aplicaciones Web con enfoque principal en JavaScript, PHP, Angular y Symfony.</p>
+          <span class="cd-date">Oct 2021 | Jun 2023</span>
+        </div> <!-- cd-timeline-content -->
+      </div> <!-- cd-timeline-block -->
+  
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture">
+        </div>
+  
+        <div class="cd-timeline-content">
+          <h2 style="color: #ffff">💼 JGH Logística</h2>
+          <div class="timeline-content-info">
+            <span class="timeline-content-info-title">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+                Auxiliar administrativo
+            </span>
+            <span class="timeline-content-info-date">
+              <i class="fa fa-calendar-o" aria-hidden="true"></i>
+              Jun 2022 - Ago 2022
+            </span>
+          </div>
+          <p>Realicé un trabajo proporcionando servicios de soporte técnico y mantenimiento informático.</p>
+          <ul class="content-skills">
+          <li>Mantenimiento informático</li>
+          <li>Servicio de soporte técnico</li>
+          </ul>
+        </div> <!-- cd-timeline-content -->
+      </div> <!-- cd-timeline-block -->
+  
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture">
+        </div>
+  
+        <div class="cd-timeline-content">
+          <h2 style="color: #ffff">💼 Brand You Development</h2>
+          <div class="timeline-content-info">
+            <span class="timeline-content-info-title">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+                Diseñador web
+            </span>
+            <span class="timeline-content-info-date">
+              <i class="fa fa-calendar-o" aria-hidden="true"></i>
+              Abr 2021 - Jun 2021
+            </span>
+          </div>
+          <p>
+            Durante mi experiencia de Erasmus, apliqué mis habilidades en diseño web, utilizando plataformas como WordPress y herramientas como Elementor. Me especialicé en la creación de sitios web atractivos y funcionales, empleando HTML5 y hojas de estilo en cascada (CSS) para garantizar una presentación visualmente agradable y una experiencia de usuario óptima.</p>
+          <ul class="content-skills">
+          <li>Diseño web</li>
+          <li>WordPress</li>
+          <li>Elementor</li>
+          <li>HTML5</li>
+          <li>CSS</li>
+          </ul>
+        </div> <!-- cd-timeline-content -->
+      </div> <!-- cd-timeline-block -->
+  
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-movie">
+        </div> <!-- cd-timeline-img -->
+  
+        <div class="cd-timeline-content">
+          <h2>Grado medio Técnico en Sistemas Microinformáticos y Redes</h2>
+          <p>Graduado en Técnico en Sistemas Microinformáticos y Redes, con habilidades destacadas en el manejo de tecnologías clave para el mantenimiento y gestión de sistemas informáticos.</p>
+          <span class="cd-date">Oct 2021 | Jun 2023</span>
+        </div> <!-- cd-timeline-content -->
+      </div> <!-- cd-timeline-block -->
+  </section>
+</Layout>
 
-		<ContactCTA />
-	</div>
-</BaseLayout>
+<style lang="scss">
+  .image {
+    border-radius: 155px;
+  }
 
-<style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+  .cd-container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 10%;
+  border-radius: 2px;
+}
+.cd-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#cd-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  height: 100%;
+  width: 4px;
+  background: #79d255;
+}
+@media only screen and (min-width: 1170px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+.cd-timeline-img {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #79d255, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.cd-timeline-img {
+  background: #72a526;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 15px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+}
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  margin-right: 30px;
+  background: #4444;
+  border-radius: 2px;
+  padding: 1em;
+  .timeline-content-info {
+    background: #171717;
+    padding: 5px 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    i {
+      margin-right: 5px;
+    }
+    .timeline-content-info-title, .timeline-content-info-date {  
+      width: calc(50% - 2px);
+      display: inline-block;
+    }
+    @media (max-width: 500px) {
+      .timeline-content-info-title, .timeline-content-info-date {  
+        display: block;
+        width:100%;
+      } 
+    }
+  }
+  .content-skills {
+    font-size: 12px;
+    padding:0;
+    margin-bottom: 0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      background: #40484D;
+      border-radius: 2px;
+      display: inline-block;
+      padding: 2px 10px;
+      color: rgba(255,255,255,0.7);
+      margin: 3px 2px;
+      text-align: center;
+      flex-grow: 1;
+    }
+  }
+}
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-content h2 {
+  color: rgba(255,255,255,.9);
+  margin-top:0;
+  margin-bottom: 5px;
+}
+.cd-timeline-content p, .cd-timeline-content .cd-date {
+  color: rgba(255,255,255,.7);
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+.cd-timeline-content .cd-date {
+  display: inline-block;
+}
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
 
-	.content {
-		grid-column: 2 / 4;
-	}
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #333C42;
+}
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+@media only screen and (min-width: 768px) {
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    color: white;
+    margin-left: 0;
+    padding: 1.6em;
+    width: 36%;
+    margin: 0 5%
+  }
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #333C42;
+  }
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 150%;
+    top: 27px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #333C42;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 150%;
+    top: 27px;
+    text-align: right;
+  }
+}
 </style>
