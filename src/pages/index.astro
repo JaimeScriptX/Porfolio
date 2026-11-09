@@ -1,27 +1,43 @@
 ---
-import Button from '../components/Button.astro';
-import Layout from '../layouts/Layout.astro';
-import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
+import Pill from "../components/Pill.astro";
 ---
 
 <Layout documentTitle="Jaime García">
   <section class="container" style="z-index: 1; position: relative;">
     <h1>
-      <span class="intro-welcome">Hey, mi nombre es <br></span>
+      <span class="intro-welcome">Hey, mi nombre es <br /></span>
       <span class="intro-name text-swipe-animation">Jaime García</span>
     </h1>
     <div class="roles">
-      <Pill><Icon icon="code" size="1.33em" />Desarrollador Full Stack Junior</Pill>
+      <Pill><Icon icon="code" size="1.33em" />Desarrollador Full Stack Mid</Pill
+      >
     </div>
     <p class="desc">
-      Desarrollador apasionado, con más de un año de experiencia, con experiencia en JavaScript, React y Node.
-      <br class="desc-break" />  Transformo desafíos en líneas de código y disfruto construyendo soluciones impactantes.
+      Desarrollador Full Stack con más de tres años de experiencia en
+      PHP/Symfony y Vue/Nuxt.
+      <br class="desc-break" /> He construido infraestructuras de microservicios,
+      plataformas de e-commerce y flujos de integración con terceros.
     </p>
 
     <Button href="/projects" variant="outline" size="lg" colorScheme="green">
       Mira mis proyectos
-      <svg style="margin-left: 5px" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+      <svg
+        style="margin-left: 5px"
+        stroke="currentColor"
+        fill="currentColor"
+        stroke-width="0"
+        viewBox="0 0 20 20"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          fill-rule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"></path></svg
+      >
     </Button>
   </section>
 
@@ -32,8 +48,12 @@ import Pill from '../components/Pill.astro';
   $waves-opacity: 0.5;
 
   @keyframes fadeInWaves {
-    0% { opacity: 0 }
-    100% { opacity: $waves-opacity }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: $waves-opacity;
+    }
   }
 
   canvas#waves {

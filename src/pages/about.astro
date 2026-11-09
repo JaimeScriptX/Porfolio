@@ -1,406 +1,532 @@
 ---
-import type { Skills } from '../types';
-import Layout from '../layouts/Layout.astro';
-import DevLogo from '../components/DevLogo.astro';
-
+import type { Skills } from "../types";
+import Layout from "../layouts/Layout.astro";
+import DevLogo from "../components/DevLogo.astro";
 
 const tags: Skills[] = [
-  "React",
+  "PHP",
   "Symfony",
-  "Angular",
+  "Vue",
+  "Nuxt",
   "JavaScript",
   "TypeScript",
-  "PHP",
-  "Tailwind CSS",
-  "MySQL",
-  "Figma",
   "Docker",
+  "MySQL",
+  "Tailwind CSS",
+  "Figma",
   "Astro",
 ];
-
 
 // Fetch stars count from GitHub
 ---
 
-<Layout documentTitle="Proyectos" documentDescription="Welcome to my portfolio, showcasing a selection of projects I've worked on.">
+<Layout
+  documentTitle="Sobre mí"
+  documentDescription="Conoce más sobre mi experiencia como desarrollador Full Stack especializado en PHP/Symfony y Vue/Nuxt."
+>
   <section class="container">
-    <h1 class="main-heading text-swipe-animation" id="greeting">
-      Sobre mí
-    </h1>
-    
+    <h1 class="main-heading text-swipe-animation" id="greeting">Sobre mí</h1>
+
     <div class="intro">
-      <p>👋 ¡Hola! Soy Jaime García Campuzano, un desarrollador Full Stack con un año de experiencia y formación en Desarrollo de Aplicaciones Web (DAW). </p>
+      <p>
+        👋 ¡Hola! Soy Jaime García Campuzano, desarrollador Full Stack con más
+        de tres años de experiencia, especializado en backend con PHP/Symfony y
+        frontend con Vue/Nuxt.
+      </p>
     </div>
-    <section class="flex flex-col md:flex-row gap-8 justify-center items-center pt-4">
+    <section
+      class="flex flex-col md:flex-row gap-8 justify-center items-center pt-4"
+    >
       <div
         class="[&>p]:mb-4 [&>p>strong]:text-yellow-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1"
       >
-      
         <p>
-          Destaco por liderar un proyecto clave de eventos deportivos durante mi grado superior, utilizando React, Symfony y MySQL. 
-          Esta experiencia fortaleció mis habilidades técnicas y de liderazgo.
+          He liderado técnicamente la construcción de una infraestructura de
+          microservicios para una empresa del sector transporte a nivel
+          nacional, tomando decisiones de arquitectura, integraciones con
+          proveedores externos y flujos de pago con QR. También desarrollé el
+          microservicio de tienda de una plataforma universitaria con más de
+          1.000 alumnos.
         </p>
-    
+
         <p>
-          En el ámbito laboral, he contribuido significativamente en proyectos especializados, destacando en el desarrollo con tecnologías como React, Node.js, PHP y Magento. 
-          Mi enfoque va más allá de la tecnología; me apasiona la creatividad y la resolución de problemas.
-          Estoy listo para enfrentar nuevos retos y contribuir a proyectos innovadores. ¡Conéctate conmigo y construyamos algo increíble juntos!
+          Me gusta el código limpio, las buenas prácticas y dormir tranquilo:
+          tests automatizados en flujos críticos, arquitectura pensada para
+          durar y documentación que se entienda. Busco equipos de producto donde
+          pueda seguir creciendo como profesional.
         </p>
-        
+
         <div class="tags flex gap-5">
-          {tags.map(tag => <DevLogo icon={tag} size={30} />)}
+          {tags.map((tag) => <DevLogo icon={tag} size={30} />)}
         </div>
       </div>
       <img src="/images/profile.png" class="image" />
     </section>
     <section class="heading">
       <h1 class="sub-heading text-swipe-animation">Experiencia laboral</h1>
-      <hr/>
+      <hr />
     </section>
     <section id="cd-timeline" class="cd-container">
       <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-        </div>
-  
-        <div class="cd-timeline-content">
-          <h2 style="color: #ffff">💼 DIGIO Soluciones Digitales</h2>
-          <div class="timeline-content-info">
-            <span class="timeline-content-info-title">
-              <i class="fa fa-certificate" aria-hidden="true"></i>
-                Full Stack Junior
-            </span>
-            <span class="timeline-content-info-date">
-              <i class="fa fa-calendar-o" aria-hidden="true"></i>
-              Marzo 2023 - Enero 2024
-            </span>
-          </div>
-          <p>Colaboré estrechamente con el equipo de diseñadores para implementar sus diseños, además de desarrollar soluciones personalizadas para abordar las necesidades específicas del equipo.</p>
-          <ul class="content-skills">
-          <li>React</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>PHP</li>
-          <li>NestJS</li>
-          <li>Node.js</li>
-          <li>Express.js</li>
-          <li>Magento</li>
-          <li>Docker</li>
-          <li>Meteor</li>
-          <li>MongoDB </li>
-          <li>HTML5</li>
-          <li>CSS</li>
-          <li>Jest</li>
+        <div class="cd-timeline-img cd-picture"></div>
 
-          </ul>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
-  
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-movie">
-        </div> <!-- cd-timeline-img -->
-  
         <div class="cd-timeline-content">
-          <h2>Grado superior Desarrollo de Aplicaciones Web</h2>
-          <p>Graduado en Desarrollo de Aplicaciones Web con enfoque principal en JavaScript, PHP, Angular y Symfony.</p>
-          <span class="cd-date">Oct 2021 | Jun 2023</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
-  
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-        </div>
-  
-        <div class="cd-timeline-content">
-          <h2 style="color: #ffff">💼 JGH Logística</h2>
+          <h2>💼 Zapp Studio</h2>
           <div class="timeline-content-info">
             <span class="timeline-content-info-title">
-              <i class="fa fa-certificate" aria-hidden="true"></i>
-                Auxiliar administrativo
+              🏢 Desarrollador Full Stack Mid
             </span>
             <span class="timeline-content-info-date">
-              <i class="fa fa-calendar-o" aria-hidden="true"></i>
-              Jun 2022 - Ago 2022
-            </span>
-          </div>
-          <p>Realicé un trabajo proporcionando servicios de soporte técnico y mantenimiento informático.</p>
-          <ul class="content-skills">
-          <li>Mantenimiento informático</li>
-          <li>Servicio de soporte técnico</li>
-          </ul>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
-  
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-        </div>
-  
-        <div class="cd-timeline-content">
-          <h2 style="color: #ffff">💼 Brand You Development</h2>
-          <div class="timeline-content-info">
-            <span class="timeline-content-info-title">
-              <i class="fa fa-certificate" aria-hidden="true"></i>
-                Diseñador web
-            </span>
-            <span class="timeline-content-info-date">
-              <i class="fa fa-calendar-o" aria-hidden="true"></i>
-              Abr 2021 - Jun 2021
+              📅 Marzo 2025 - Noviembre 2026
             </span>
           </div>
           <p>
-            Durante mi experiencia de Erasmus, apliqué mis habilidades en diseño web, utilizando plataformas como WordPress y herramientas como Elementor. Me especialicé en la creación de sitios web atractivos y funcionales, empleando HTML5 y hojas de estilo en cascada (CSS) para garantizar una presentación visualmente agradable y una experiencia de usuario óptima.</p>
+            Lideré técnicamente un proyecto de microservicios para un cliente
+            del sector transporte: rotación diaria de gasolineras con backups y
+            prioridad, integraciones con proveedores de combustible y sistemas
+            internos, y flujo de pago con QR. También desarrollé el
+            microservicio de tienda de una plataforma universitaria para más de
+            1.000 alumnos, con tests automatizados en los flujos críticos.
+          </p>
           <ul class="content-skills">
-          <li>Diseño web</li>
-          <li>WordPress</li>
-          <li>Elementor</li>
-          <li>HTML5</li>
-          <li>CSS</li>
+            <li>PHP</li>
+            <li>Symfony</li>
+            <li>Vue</li>
+            <li>Nuxt</li>
+            <li>Docker</li>
+            <li>MySQL</li>
+            <li>PHPUnit</li>
+            <li>Doctrine</li>
+            <li>GitHub Actions</li>
+            <li>Elasticsearch</li>
+            <li>Arquitectura hexagonal</li>
           </ul>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
-  
+        </div>
+        <!-- cd-timeline-content -->
+      </div>
+      <!-- cd-timeline-block -->
+
       <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-movie">
-        </div> <!-- cd-timeline-img -->
-  
+        <div class="cd-timeline-img cd-picture"></div>
+
+        <div class="cd-timeline-content">
+          <h2>💼 Compralaentrada</h2>
+          <div class="timeline-content-info">
+            <span class="timeline-content-info-title">
+              🏢 Full Stack Junior
+            </span>
+            <span class="timeline-content-info-date">
+              📅 Febrero 2024 - Marzo 2025
+            </span>
+          </div>
+          <p>
+            Desarrollo y mantenimiento de funcionalidades para una plataforma de
+            venta de entradas, mejorando componentes reutilizables, flujos de
+            usuario y estabilidad de la aplicación. Incorporé pruebas sobre
+            recorridos críticos de compra, reduciendo incidencias recurrentes de
+            regresión aproximadamente un 25%.
+          </p>
+          <ul class="content-skills">
+            <li>PHP</li>
+            <li>Symfony</li>
+            <li>JavaScript</li>
+            <li>Vue</li>
+            <li>MySQL</li>
+            <li>Docker</li>
+            <li>PHPUnit</li>
+          </ul>
+        </div>
+        <!-- cd-timeline-content -->
+      </div>
+      <!-- cd-timeline-block -->
+
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture"></div>
+
+        <div class="cd-timeline-content">
+          <h2>💼 DIGIO Soluciones Digitales</h2>
+          <div class="timeline-content-info">
+            <span class="timeline-content-info-title">
+              🏢 Full Stack Junior
+            </span>
+            <span class="timeline-content-info-date">
+              📅 Marzo 2023 - Enero 2024
+            </span>
+          </div>
+          <p>
+            Desarrollo de funcionalidades y resolución de incidencias en
+            proyectos de e-commerce y gestión interna, colaborando con el equipo
+            de diseño para implementar interfaces y soluciones a medida.
+          </p>
+          <ul class="content-skills">
+            <li>React</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>PHP</li>
+            <li>NestJS</li>
+            <li>Node.js</li>
+            <li>Magento</li>
+            <li>Docker</li>
+            <li>MongoDB</li>
+            <li>Jest</li>
+          </ul>
+        </div>
+        <!-- cd-timeline-content -->
+      </div>
+      <!-- cd-timeline-block -->
+
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-movie"></div>
+        <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+          <h2>Grado superior Desarrollo de Aplicaciones Web</h2>
+          <p>
+            Graduado en Desarrollo de Aplicaciones Web con enfoque principal en
+            JavaScript, PHP, Angular y Symfony.
+          </p>
+        </div>
+        <!-- cd-timeline-content -->
+        <span class="cd-date">Oct 2021 | Jun 2023</span>
+      </div>
+      <!-- cd-timeline-block -->
+
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture"></div>
+
+        <div class="cd-timeline-content">
+          <h2>💼 JGH Logística</h2>
+          <div class="timeline-content-info">
+            <span class="timeline-content-info-title">
+              🏢 Auxiliar administrativo
+            </span>
+            <span class="timeline-content-info-date">
+              📅 Jun 2022 - Ago 2022
+            </span>
+          </div>
+          <p>
+            Soporte técnico y mantenimiento informático durante el periodo de
+            prácticas.
+          </p>
+          <ul class="content-skills">
+            <li>Mantenimiento informático</li>
+            <li>Servicio de soporte técnico</li>
+          </ul>
+        </div>
+        <!-- cd-timeline-content -->
+      </div>
+      <!-- cd-timeline-block -->
+
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture"></div>
+
+        <div class="cd-timeline-content">
+          <h2>💼 Brand You Development</h2>
+          <div class="timeline-content-info">
+            <span class="timeline-content-info-title">
+              🏢 Diseñador web
+            </span>
+            <span class="timeline-content-info-date">
+              📅 Abr 2021 - Jun 2021
+            </span>
+          </div>
+          <p>
+            Erasmus en el que diseñé y maqueteé sitios web con WordPress y
+            Elementor.
+          </p>
+          <ul class="content-skills">
+            <li>Diseño web</li>
+            <li>WordPress</li>
+            <li>Elementor</li>
+            <li>HTML5</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+        <!-- cd-timeline-content -->
+      </div>
+      <!-- cd-timeline-block -->
+
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-movie"></div>
+        <!-- cd-timeline-img -->
+
         <div class="cd-timeline-content">
           <h2>Grado medio Técnico en Sistemas Microinformáticos y Redes</h2>
-          <p>Graduado en Técnico en Sistemas Microinformáticos y Redes, con habilidades destacadas en el manejo de tecnologías clave para el mantenimiento y gestión de sistemas informáticos.</p>
-          <span class="cd-date">Oct 2021 | Jun 2023</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
+          <p>
+            Graduado en Técnico en Sistemas Microinformáticos y Redes, con
+            habilidades en mantenimiento y gestión de sistemas informáticos.
+          </p>
+        </div>
+        <!-- cd-timeline-content -->
+        <span class="cd-date">Oct 2019 | Jun 2021</span>
+      </div>
+      <!-- cd-timeline-block -->
+    </section>
   </section>
-</Layout>
 
-<style lang="scss">
-  .image {
-    border-radius: 155px;
-  }
-
-  .cd-container {
-  width: 90%;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 10%;
-  border-radius: 2px;
-}
-.cd-container::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-#cd-timeline {
-  position: relative;
-  padding: 2em 0;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-#cd-timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 25px;
-  height: 100%;
-  width: 4px;
-  background: #79d255;
-}
-@media only screen and (min-width: 1170px) {
-  #cd-timeline {
-    margin-top: 3em;
-    margin-bottom: 3em;
-  }
-  #cd-timeline::before {
-    left: 50%;
-    margin-left: -2px;
-  }
-}
-
-.cd-timeline-block {
-  position: relative;
-  margin: 2em 0;
-}
-.cd-timeline-block:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.cd-timeline-block:first-child {
-  margin-top: 0;
-}
-.cd-timeline-block:last-child {
-  margin-bottom: 0;
-}
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-block {
-    margin: 4em 0;
-  }
-  .cd-timeline-block:first-child {
-    margin-top: 0;
-  }
-  .cd-timeline-block:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.cd-timeline-img {
-  position: absolute;
-  top: 8px;
-  left: 12px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px #79d255, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-}
-.cd-timeline-img {
-  background: #72a526;
-}
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-img {
-    width: 30px;
-    height: 30px;
-    left: 50%;
-    margin-left: -15px;
-    margin-top: 15px;
-    /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-  }
-}
-
-.cd-timeline-content {
-  position: relative;
-  margin-left: 60px;
-  margin-right: 30px;
-  background: #4444;
-  border-radius: 2px;
-  padding: 1em;
-  .timeline-content-info {
-    background: #171717;
-    padding: 5px 10px;
-    color: rgba(255,255,255,0.7);
-    font-size: 12px;
-    box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.08);
-    border-radius: 2px;
-    i {
-      margin-right: 5px;
+  <style lang="scss">
+    .image {
+      border-radius: 155px;
     }
-    .timeline-content-info-title, .timeline-content-info-date {  
-      width: calc(50% - 2px);
-      display: inline-block;
+
+    .cd-container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .cd-container::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    #cd-timeline {
+      position: relative;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    #cd-timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 26px;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(
+        to bottom,
+        rgba(168, 242, 56, 0.25),
+        rgba(168, 242, 56, 0.6),
+        rgba(168, 242, 56, 0.25)
+      );
+      border-radius: 2px;
+    }
+    @media only screen and (min-width: 1170px) {
+      #cd-timeline {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+      #cd-timeline::before {
+        left: 50%;
+        margin-left: -1px;
+      }
+    }
+
+    .cd-timeline-block {
+      position: relative;
+      margin: 2.5rem 0;
+    }
+    .cd-timeline-block:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .cd-timeline-block:first-child {
+      margin-top: 0;
+    }
+    .cd-timeline-block:last-child {
+      margin-bottom: 0;
+    }
+    @media only screen and (min-width: 1170px) {
+      .cd-timeline-block {
+        margin: 3.5rem 0;
+      }
+    }
+
+    .cd-timeline-img {
+      position: absolute;
+      top: 18px;
+      left: 20px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #13151a;
+      border: 2px solid var(--color-green);
+      box-shadow: 0 0 12px rgba(168, 242, 56, 0.35);
+      z-index: 2;
+    }
+    @media only screen and (min-width: 1170px) {
+      .cd-timeline-img {
+        left: 50%;
+        margin-left: -7px;
+        top: 26px;
+      }
+    }
+
+    .cd-timeline-content {
+      position: relative;
+      margin-left: 60px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 1.25rem 1.5rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+    .cd-timeline-content:hover {
+      transform: translateY(-3px);
+      border-color: rgba(168, 242, 56, 0.25);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(168, 242, 56, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+    .cd-timeline-content:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .cd-timeline-content h2 {
+      color: var(--color-silver-100);
+      font-size: var(--font-size-xl);
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .cd-timeline-content p {
+      color: var(--color-silver-200);
+      font-size: var(--font-size-base);
+      margin: 0.75rem 0;
+      line-height: 1.65;
+    }
+    .cd-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--color-green);
+      font-family: var(--font-family-IBM-Plex-Mono);
+      font-size: var(--font-size-xs);
+      background: rgba(168, 242, 56, 0.08);
+      border: 1px solid rgba(168, 242, 56, 0.25);
+      border-radius: 999rem;
+      padding: 0.35rem 0.75rem;
+      margin-top: 0.75rem;
+      opacity: 0.9;
+      transition: all 0.2s ease;
+    }
+    .cd-date:hover {
+      background: rgba(168, 242, 56, 0.15);
+      border-color: rgba(168, 242, 56, 0.4);
+    }
+
+    .timeline-content-info {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.75rem;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      font-family: var(--font-family-IBM-Plex-Mono);
+      font-size: var(--font-size-xs);
+      color: var(--color-silver-300);
+    }
+    .timeline-content-info-title,
+    .timeline-content-info-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
     @media (max-width: 500px) {
-      .timeline-content-info-title, .timeline-content-info-date {  
-        display: block;
-        width:100%;
-      } 
+      .timeline-content-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
     }
-  }
-  .content-skills {
-    font-size: 12px;
-    padding:0;
-    margin-bottom: 0;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    li {
-      background: #40484D;
-      border-radius: 2px;
-      display: inline-block;
-      padding: 2px 10px;
-      color: rgba(255,255,255,0.7);
-      margin: 3px 2px;
-      text-align: center;
-      flex-grow: 1;
+
+    .content-skills {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0;
+      margin: 1rem 0 0 0;
     }
-  }
-}
-.cd-timeline-content:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.cd-timeline-content h2 {
-  color: rgba(255,255,255,.9);
-  margin-top:0;
-  margin-bottom: 5px;
-}
-.cd-timeline-content p, .cd-timeline-content .cd-date {
-  color: rgba(255,255,255,.7);
-  font-size: 13px;
-  font-size: 0.8125rem;
-}
-.cd-timeline-content .cd-date {
-  display: inline-block;
-}
-.cd-timeline-content p {
-  margin: 1em 0;
-  line-height: 1.6;
-}
+    .content-skills li {
+      font-family: var(--font-family-IBM-Plex-Mono);
+      font-size: var(--font-size-xs);
+      color: var(--color-silver-200);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999rem;
+      padding: 0.35rem 0.75rem;
+      transition: all 0.2s ease;
+    }
+    .content-skills li:hover {
+      border-color: rgba(168, 242, 56, 0.4);
+      color: var(--color-green);
+      background: rgba(168, 242, 56, 0.08);
+    }
 
-.cd-timeline-content::before {
-  content: '';
-  position: absolute;
-  top: 16px;
-  right: 100%;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-right: 7px solid #333C42;
-}
+    .cd-timeline-content::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 100%;
+      height: 0;
+      width: 0;
+      border: 8px solid transparent;
+      border-right: 8px solid rgba(255, 255, 255, 0.08);
+    }
 
-@media only screen and (min-width: 768px) {
-  .cd-timeline-content h2 {
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
-  .cd-timeline-content p {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
-}
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-content {
-    color: white;
-    margin-left: 0;
-    padding: 1.6em;
-    width: 36%;
-    margin: 0 5%
-  }
-  .cd-timeline-content::before {
-    top: 24px;
-    left: 100%;
-    border-color: transparent;
-    border-left-color: #333C42;
-  }
-  .cd-timeline-content .cd-date {
-    position: absolute;
-    width: 100%;
-    left: 150%;
-    top: 27px;
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content {
-    float: right;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
-    top: 24px;
-    left: auto;
-    right: 100%;
-    border-color: transparent;
-    border-right-color: #333C42;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
-    float: right;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
-    left: auto;
-    right: 150%;
-    top: 27px;
-    text-align: right;
-  }
-}
-</style>
+    @media only screen and (min-width: 768px) {
+      .cd-timeline-content {
+        padding: 1.5rem 2rem;
+      }
+      .cd-timeline-content h2 {
+        font-size: var(--font-size-2xl);
+      }
+      .cd-timeline-content p {
+        font-size: var(--font-size-lg);
+      }
+    }
+
+    @media only screen and (min-width: 1170px) {
+      .cd-timeline-content {
+        margin-left: 0;
+        width: 44%;
+      }
+      .cd-timeline-content::before {
+        top: 28px;
+        left: 100%;
+        border-color: transparent;
+        border-left-color: rgba(255, 255, 255, 0.08);
+        border-right-color: transparent;
+      }
+      .cd-date {
+        position: absolute;
+        top: 24px;
+        left: calc(50% + 1.25rem);
+        transform: none;
+        margin-top: 0;
+        white-space: nowrap;
+      }
+      .cd-timeline-block:nth-child(even) .cd-timeline-content {
+        float: right;
+      }
+      .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+        top: 28px;
+        left: auto;
+        right: 100%;
+        border-color: transparent;
+        border-right-color: rgba(255, 255, 255, 0.08);
+        border-left-color: transparent;
+      }
+      .cd-timeline-block:nth-child(even) .cd-date {
+        left: auto;
+        right: calc(50% + 1.25rem);
+      }
+    }
+  </style>
+</Layout>

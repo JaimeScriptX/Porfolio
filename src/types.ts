@@ -30,3 +30,5 @@ export type Skills =
   | "WordPress"
   | "Symfony"
   | "Angular"
+  | "Vue"
+  | "Nuxt"
