@@ -32,3 +32,5 @@ export type Skills =
   | "Angular"
   | "Vue"
   | "Nuxt"
+  | "Flutter"
+  | "Dart"

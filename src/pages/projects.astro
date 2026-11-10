@@ -12,6 +12,30 @@ let title = Astro.props;
     <h1 class="main-heading text-swipe-animation">Proyectos</h1>
 
     <section class="heading">
+      <h1 class="sub-heading text-swipe-animation">2026</h1>
+      <hr/>
+    </section>
+    <section class="projects">
+
+      <PortfolioItem
+        projectYear="2026"
+        title="BOBIT"
+        image="/images/projects/bobit.jpg"
+        tags={[
+          "Flutter",
+          "Dart",
+        ]}>
+        <p slot="subtitle">App móvil de tareas, notas, hábitos y metas, pensada para organizar el día a día con calma.</p>
+
+      <div slot="description">
+        <p>Reúne en un solo sitio lo que una persona hace cada día. Local primero: sin cuenta, sin servidor y sin conexión. Hecha con Flutter, Riverpod, Isar y Shorebird.</p>
+        <p>Disponible en iOS (<a href="https://apps.apple.com/es/app/bobit/id6787741204" target="_blank" rel="noopener noreferrer">App Store</a>). Android, más adelante. Código privado, disponible en entrevista.</p>
+      </div>
+      </PortfolioItem>
+
+    </section>
+
+    <section class="heading">
       <h1 class="sub-heading text-swipe-animation">2023</h1>
       <hr/>
     </section>
@@ -57,8 +81,6 @@ let title = Astro.props;
         </div>
       </PortfolioItem>
 
-    
-      </div>
     </section>
   </div>
 </Layout>
